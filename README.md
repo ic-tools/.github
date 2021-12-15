@@ -1,3 +1,3 @@
 # .github
 
-## ICT TOOLS
+## ICT Tools
