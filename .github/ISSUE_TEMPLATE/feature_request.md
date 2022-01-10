@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: a request for adding additional functionality or features for the ci cd service
+about: a request for adding additional functionality or features to the code/service housed in this repo.
 title: "[Request]"
 labels: ''
 assignees: ''
