@@ -2,17 +2,17 @@
 name: Customer Implementation
 about: A ticket for tracking a customer implementation request and the tasks therein. 
 title: Customer Implementation - [Customer Name]
-labels: ["Customer Implementation"]
-projects: [ic-tools/1]
-assignees: [ic-tools/integration-implementation-team]
+labels: ["Customer Implementation", "Spectrum-ON!Track"]
+projects: ic-tools/1
+assignees: ic-tools/integration-implementation-tea
 
 ---
 
 ### Customer Data
 
 | Property |      Value    |
-|:----------|-------------:|
-| Viewpoint ERP |   |
+|:----------|:-------------:|
+| Viewpoint ERP | Spectrum |
 | EM Company Code |   |
 | EM Category ID |   |
 | EM Department ID |   |
@@ -21,6 +21,12 @@ assignees: [ic-tools/integration-implementation-team]
 | Location Manager ID |  |
 | Responsible Employee ID |  |
 | Inventory Employee ID |  |
+
+**Spectrum Equipment Status Export:**
+
+```
+
+```
 
 | Workflow |      Enable    |
 |:----------|-------------:|
@@ -34,6 +40,7 @@ assignees: [ic-tools/integration-implementation-team]
 ```[tasklist]
 ### Tasks
 - [ ] Initial Customer onboarding conversation
+- [ ] Customer Configuration Details captured
 - [ ] Customer ON!Track credentials transferred and verified
 - [ ] Data Review and transferred to Customer
 - [ ] Data Reconciliation Complete
