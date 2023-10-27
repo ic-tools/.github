@@ -1,6 +1,6 @@
 ---
-name: Customer Implementation
-about: A ticket for tracking a customer implementation request and the tasks therein. 
+name: Spectrum-ON!Track Customer Implementation
+about: A ticket for tracking a customer implementation request for the Spectrum-ON!Track integration. 
 title: Customer Implementation - [Customer Name]
 labels: ["Customer Implementation", "Spectrum-ON!Track"]
 projects: ic-tools/1
