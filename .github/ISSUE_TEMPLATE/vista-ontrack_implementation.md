@@ -1,6 +1,6 @@
 ---
-name: Customer Implementation
-about: A ticket for tracking a customer implementation request and the tasks therein. 
+name: Vista-ON!Track Customer Implementation
+about: A ticket for tracking a customer implementation request for the Vista-ON!Track integration. 
 title: Customer Implementation - [Customer Name]
 labels: ["Customer Implementation", "Vita-ON!Track"]
 projects: ic-tools/1
