@@ -1,10 +1,10 @@
 ---
 name: Customer Implementation
 about: A ticket for tracking a customer implementation request and the tasks therein. 
-title: ["Customer Implementation - [Customer Name]"]
+title: Customer Implementation - [Customer Name]
 labels: ["Customer Implementation"]
-projects: ["ic-tools/1"]
-assignees: ["ic-tools/integration-implementation-team"]
+projects: [ic-tools/1]
+assignees: [ic-tools/integration-implementation-team]
 
 ---
 
