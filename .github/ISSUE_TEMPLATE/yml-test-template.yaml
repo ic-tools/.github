@@ -7,54 +7,173 @@ projects: ["ic-tools/1"]
 body:
   - type: dropdown
     attributes:
-      label: Pick a card, any card
-      description: That wasn't a request
+      label: Viewpoint ERP
+      description: The Viewpoint ERP that the Customer has in use and wishes to integrate to ON!Track
       multiple: false
       options:
-        - Ace of Spades
-        - King of Hearts
-        - Jack of Diamonds
-        - Queen of Clubs
-      default: 0
+        - Vista
+        - Spectrum
+      default: 1
     validations:
       required: true
   - type: input
-    id: contact
+    id: em_company_code
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: "ex. email@example.com"
+      label: EM Company Code
+      description: The CompanyCode of the single EM Company that contains the customers EM Equipment data
+      placeholder: "101"
+    validations:
+      required: false
+  - type: input
+    id: em_category_id
+    attributes:
+      label: EM Category ID
+      description: The EM Category ID for the category EM Equpiment Location Transfers will be marked
+      placeholder: "11"
+    validations:
+      required: false
+  - type: input
+    id: em_department_id
+    attributes:
+      label: EM Department ID
+      description: The EM Department ID of the appropriate department for synced EM Equipment Data
+      placeholder: "22"
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: project_company_codes
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: "Tell us what you see!"
-      value: "A bug happened!"
+      label: Project Company Codes
+      description: The CompanyCode(s) for the one or more companies that contain JC Jobs that will be synced to ON!Track
+      placeholder: "101"
+    validations:
+      required: false
+  - type: input
+    id: default_location_id
+    attributes:
+      label: Default Location ID
+      description: The Hilti Location ID that newly created Assets will be created in
+      placeholder: "1234567"
+    validations:
+      required: false
+  - type: input
+    id: default_location_manager_id
+    attributes:
+      label: Location Manager ID
+      description: The Hilti Worker ID for the location manager that newly created Locations will be set to
+      placeholder: "7654321"
+    validations:
+      required: false
+  - type: input
+    id: responsible_employee_id
+    attributes:
+      label: Responsible Employee ID
+      description: The Hilti Worker ID for the responsible employee that newly created Assets will be assigned to
+      placeholder: "5555555"
+    validations:
+      required: false
+  - type: input
+    id: inventory_employee_id
+    attributes:
+      label: Inventory Employee ID
+      description: The Hilti Worker ID for the Inventory Employee that will be assigned to newly created Locations
+      placeholder: "7777777"
+    validations:
+      required: false
+  - type: textarea
+    id: equipment_status_codes
+    attributes:
+      label: Spectrum Equipment Status JSON
+      description: This is the generated JSON created from the Equipment Status report that the customer will extract and pass along to us.
+      render: json
+      placeholder: "{}"
+  - type: dropdown
+    attributes:
+      label: ON!Track Asset -> Spectrum Equipment - CREATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
+      options:
+        - Enabled
+        - Disabled
+      default: 1
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     attributes:
-      label: How you doing?
-      description: Pick as many as apply
+      label: Hilti ON!Track Transfers -> Spectrum Equipment Location Transfers - CREATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
       options:
-        - label: Pretty good, thanks for asking
-          required: false
-        - label: None of your business
-          required: false
-        - label: Tired, man. So Tired. 
-          required: false
-        - label: Living the dream
-          required: false
-  - type: textarea
-    id: logs
+        - Enabled
+        - Disabled
+      default: 1
+    validations:
+      required: true
+  - type: dropdown
     attributes:
-      label: Write something in JSON
-      description: Anything, really, just don't cheap on the format
-      render: shell
-      placeholder: "{}"
+      label: Spectrum Employee -> Hilti ON!Track Workers - CREATE / UPDATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
+      options:
+        - Enabled
+        - Disabled
+      default: 1
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Spectrum Equipment -> Hilti ON!Track Assets - CREATE / UPDATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
+      options:
+        - Enabled
+        - Disabled
+      default: 1
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Spectrum Jobs -> Hilti ON!Track Locations - CREATE / UPDATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
+      options:
+        - Enabled
+        - Disabled
+      default: 1
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Spectrum Yards -> ON!Track Locations - CREATE / UPDATE
+      description: Will this workflow be enabled for this customer?
+      multiple: false
+      options:
+        - Enabled
+        - Disabled
+      default: 1
+    validations:
+      required: true
   - type: markdown
     attributes:
-      value: "None of this should show up in the ticket itself. Would be cool if it did, but whatever."
+      value: "This section is reserved for status tracking - only mark steps completed prior to ticket creation"
+  - type: checkboxes
+    attributes:
+      label: Task List
+      description: Indicate what steps have been completed
+      options:
+        - label: Initial Customer onboarding conversation
+          required: false
+        - label: Customer Configuration Details captured
+          required: false
+        - label: Customer ON!Track credentials transferred and verified 
+          required: false
+        - label: Data Review and transferred to Customer
+          required: false
+        - label: Data Reconciliation Complete
+          required: false
+        - label: Workflows configured and verified
+          required: false
+        - label: Workflows Activated
+          required: false
+        - label: Follow-Up discussion with customer completed
+          required: false
