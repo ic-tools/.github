@@ -1,0 +1,60 @@
+name: Test Template
+description: Figuring out how these templates work
+title: "[Bug]: "
+labels: ["Customer Implementation", "Vita-ON!Track"]
+projects: ["ic-tools/1"]
+
+body:
+  - type: dropdown
+    attributes:
+      label: Pick a card, any card
+      description: That wasn't a request
+      multiple: false
+      options:
+        - Ace of Spades
+        - King of Hearts
+        - Jack of Diamonds
+        - Queen of Clubs
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: How you doing?
+      description: Pick as many as apply
+      options:
+        - label: Pretty good, thanks for asking
+          required: false
+        - label: None of your business
+          required: false
+        - label: Tired, man. So Tired. 
+          required: false
+        - label: Living the dream
+          required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Write something in JSON
+      description: Anything, really, just don't cheap on the format
+      render: shell
+      placeholder: {}
+  - type: markdown
+    attributes:
+      value: "None of this should show up in the ticket itself. Would be cool if it did, but whatever."
