@@ -13,7 +13,7 @@ body:
       options:
         - Vista
         - Spectrum
-      default: 1
+      default: 0
     validations:
       required: true
   - type: input
