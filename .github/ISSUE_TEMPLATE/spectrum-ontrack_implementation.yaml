@@ -1,7 +1,7 @@
-name: Test Template
-description: Figuring out how these templates work
-title: "[Bug]: "
-labels: ["Customer Implementation", "Vita-ON!Track"]
+name: Spectrum-ON!Track Customer Implementation
+description: A ticket for tracking a customer implementation request for the Spectrum-ON!Track integration.
+title: "Customer Implementation - [Customer Name]"
+labels: ["Customer Implementation", "Spectrum-ON!Track"]
 projects: ["ic-tools/1"]
 
 body:
