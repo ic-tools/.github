@@ -1,7 +1,7 @@
-name: Test Template
-description: Figuring out how these templates work
-title: "[Bug]: "
-labels: ["Customer Implementation", "Vita-ON!Track"]
+name: Vista-ON!Track Customer Implementation
+description: A ticket for tracking a customer implementation request for the Vista-ON!Track integration.
+title: "Customer Implementation - [Customer Name]"
+labels: ["Customer Implementation", "Vista-ON!Track"]
 projects: ["ic-tools/1"]
 
 body:
@@ -80,16 +80,9 @@ body:
       placeholder: "7777777"
     validations:
       required: false
-  - type: textarea
-    id: equipment_status_codes
-    attributes:
-      label: Spectrum Equipment Status JSON
-      description: This is the generated JSON created from the Equipment Status report that the customer will extract and pass along to us.
-      render: json
-      placeholder: "{}"
   - type: dropdown
     attributes:
-      label: ON!Track Asset -> Spectrum Equipment - CREATE
+      label: ON!Track Assets -> Vista Equipment - CREATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
@@ -100,7 +93,7 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Hilti ON!Track Transfers -> Spectrum Equipment Location Transfers - CREATE
+      label: ON!Track Transfers -> Vista Location Transfers - CREATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
@@ -111,7 +104,7 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Spectrum Employee -> Hilti ON!Track Workers - CREATE / UPDATE
+      label: Vista Employees -> ON!Track Workers - CREATE / UPDATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
@@ -122,7 +115,7 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Spectrum Equipment -> Hilti ON!Track Assets - CREATE / UPDATE
+      label: Vista Equipment -> ON!Track Assets - CREATE / UPDATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
@@ -133,7 +126,7 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Spectrum Jobs -> Hilti ON!Track Locations - CREATE / UPDATE
+      label: Vista Jobs -> ON!Track Locations - CREATE / UPDATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
@@ -144,7 +137,7 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Spectrum Yards -> ON!Track Locations - CREATE / UPDATE
+      label: Vista Locations -> ON!Track Locations - CREATE / UPDATE
       description: Will this workflow be enabled for this customer?
       multiple: false
       options:
